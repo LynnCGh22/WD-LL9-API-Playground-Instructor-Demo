@@ -42,5 +42,10 @@ function fetchCatFact() {
 
 
 // STEP 3: Add click event listener to button - Instructor add in event listener and explain
+factButton.addEventListener("click", fetchCatFact);
+
+fetch("https://catfact.ninja/fact") 
+.then(response =>response.json()) 
+.then(data => { console.log(data);   });
 
 
