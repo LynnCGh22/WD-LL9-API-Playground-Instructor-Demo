@@ -154,6 +154,19 @@ button:active {
   transform: translateY(0);
 }
 
+.data-button{
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
 .fact-box {
   margin-top: 30px;
   padding: 25px;
