@@ -154,7 +154,7 @@ button:active {
   transform: translateY(0);
 }
 
-.data-button{
+.data-button {
   background-color: #4caf50;
   color: white;
   border: none;
@@ -165,6 +165,16 @@ button:active {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .fact-box {
