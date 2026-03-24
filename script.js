@@ -48,4 +48,9 @@ fetch("https://catfact.ninja/fact")
 .then(response =>response.json()) 
 .then(data => { console.log(data);   });
 
+const output=document.getElementById("output");  
+fetch("https://catfact.ninja/fact") 
+.then(response =>response.json()) 
+.then(data => { output.innerText=data.fact;   });
+
 
