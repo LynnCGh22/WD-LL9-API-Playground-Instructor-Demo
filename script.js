@@ -53,4 +53,7 @@ fetch("https://catfact.ninja/fact")
 .then(response =>response.json()) 
 .then(data => { output.innerText=data.fact;   });
 
-
+const button=document.getElementById("fetch-btn");  
+button.addEventListener("click",function() { fetch("https://catfact.ninja/fact") 
+.then(response =>response.json()) 
+.then(data => { output.innerText=data.fact;     }); });
