@@ -13,7 +13,7 @@ function fetchCatFact() {
     factDisplay.textContent = "Loading cat fact...";
 
     // Fetch data from API
-    fetch("https://randomfox.ca/floof/")
+    fetch("https://catfact.ninja/fact")
 
         .then(function(response) {
 
