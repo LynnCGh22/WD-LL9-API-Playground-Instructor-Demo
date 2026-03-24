@@ -1,59 +1,24 @@
-// STEP 1: Select elements from the page -- Instructor explain Step 1-2 & demo/explain Step 3 event listener
-
 const factButton = document.getElementById("fact-button");
-
-const factDisplay = document.getElementById("fact-display");
-
-
-// STEP 2: Create function to fetch data from API
+const output = document.getElementById("output");
 
 function fetchCatFact() {
+  output.textContent = "Loading cat fact...";
 
-    // Show loading message - Explain this line of code
-    factDisplay.textContent = "Loading cat fact...";
+  fetch("https://catfact.ninja/fact")
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Network response was not OK");
+      }
 
-    // Fetch data from API
-    fetch("https://catfact.ninja/fact")
-
-        .then(function(response) {
-
-            // Convert response to JSON
-            return response.json();
-
-        })
-
-        .then(function(data) {
-
-            // Display fact on page
-            factDisplay.textContent = data.fact;
-
-        })
-
-        .catch(function(error) {
-
-            // Handle errors
-            factDisplay.textContent = "Something went wrong. Try again.";
-
-            console.log(error);
-
-        });
-
+      return response.json();
+    })
+    .then(function (data) {
+      output.textContent = data.fact;
+    })
+    .catch(function (error) {
+      output.textContent = "Something went wrong. Please try again.";
+      console.error("Fetch error:", error);
+    });
 }
 
-
-// STEP 3: Add click event listener to button - Instructor add in event listener and explain
 factButton.addEventListener("click", fetchCatFact);
-
-fetch("https://catfact.ninja/fact") 
-.then(response =>response.json()) 
-.then(data => { console.log(data);   });
-
-const output=document.getElementById("output");  
-fetch("https://catfact.ninja/fact") 
-.then(response =>response.json()) 
-.then(data => { output.innerText=data.fact;   });
-
-const button=document.getElementById("fetch-btn");  
-button.addEventListener("click",function() { fetch("https://catfact.ninja/fact") 
-.then(response =>response.json()) 
-.then(data => { output.innerText=data.fact;     }); });
