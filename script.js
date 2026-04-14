@@ -1,8 +1,10 @@
+/* script.js - JavaScript code for fetching cat facts and pictures from APIs */
 const factButton = document.getElementById("fact-button");
 const pictureButton = document.getElementById("picture-button");
 const output = document.getElementById("output");
 const pictureOutput = document.getElementById("picture-output");
 
+/* Function to fetch a random cat fact from the API and display it */
 function fetchCatFact() {
   output.textContent = "Loading cat fact...";
 
@@ -23,6 +25,7 @@ function fetchCatFact() {
     });
 }
 
+/* Function to fetch a random cat picture from the API and display it */
 function fetchCatPicture() {
   pictureOutput.textContent = "Loading cat picture...";
 
