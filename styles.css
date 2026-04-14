@@ -50,12 +50,12 @@ body {
 }
 
 .nav-menu a:hover {
-  color: #4caf50;
+  color: #9fe7b8;
 }
 
 /* Hero Section Styles */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1f4d7a 0%, #173a5b 100%);
   color: white;
   padding: 120px 2rem 80px;
   text-align: center;
@@ -82,7 +82,7 @@ body {
 
 .cta-button {
   display: inline-block;
-  background-color: #4caf50;
+  background-color: #1f6f43;
   color: white;
   padding: 15px 40px;
   font-size: 1.1rem;
@@ -94,7 +94,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #45a049;
+  background-color: #185a36;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -132,7 +132,7 @@ h2 {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: darkgreen;
   color: white;
   border: none;
   padding: 14px 32px;
@@ -141,13 +141,13 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 4px 10px rgba(31, 111, 67, 0.35);
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #185a36;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 6px 15px rgba(31, 111, 67, 0.45);
 }
 
 button:active {
@@ -155,7 +155,7 @@ button:active {
 }
 
 .data-button {
-  background-color: #4caf50;
+  background-color: darkgreen;
   color: white;
   border: none;
   padding: 14px 32px;
@@ -164,16 +164,16 @@ button:active {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 4px 10px rgba(31, 111, 67, 0.35);
 }
 
-button:hover {
-  background-color: #45a049;
+.data-button:hover {
+  background-color: darkgreen;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 6px 15px rgba(31, 111, 67, 0.45);
 }
 
-button:active {
+.data-button:active {
   transform: translateY(0);
 }
 
