@@ -177,12 +177,28 @@ button:active {
   transform: translateY(0);
 }
 
+/* Fact and Picture Box Styles */
 .fact-box {
   margin-top: 30px;
   padding: 25px;
   background-color: #f0f4f8;
   border-radius: 12px;
   min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  border-left: 4px solid #667eea;
+}
+
+.picture-box {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
