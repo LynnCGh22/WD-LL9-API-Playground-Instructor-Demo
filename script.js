@@ -1,5 +1,7 @@
 const factButton = document.getElementById("fact-button");
+const pictureButton = document.getElementById("picture-button");
 const output = document.getElementById("output");
+const pictureOutput = document.getElementById("picture-output");
 
 function fetchCatFact() {
   output.textContent = "Loading cat fact...";
@@ -22,8 +24,8 @@ function fetchCatFact() {
 }
 
 function fetchCatPicture() {
-  output.textContent = "Loading cat picture...";
-  
+  pictureOutput.textContent = "Loading cat picture...";
+
   fetch("https://api.thecatapi.com/v1/images/search")
     .then(function (response) {
       if (!response.ok) {
@@ -32,16 +34,24 @@ function fetchCatPicture() {
       return response.json();
     })
     .then(function (data) {
+      if (!Array.isArray(data) || !data[0] || !data[0].url) {
+        throw new Error("No image URL found in API response");
+      }
+
       const img = document.createElement("img");
       img.src = data[0].url;
       img.alt = "A cute cat";
-      output.innerHTML = "";
-      output.appendChild(img);
+      img.loading = "lazy";
+      img.className = "cat-image";
+
+      pictureOutput.innerHTML = "";
+      pictureOutput.appendChild(img);
     })
     .catch(function (error) {
-      output.textContent = "Something went wrong. Please try again.";
+      pictureOutput.textContent = "Something went wrong. Please try again.";
       console.error("Fetch error:", error);
     });
 }
 
 factButton.addEventListener("click", fetchCatFact);
+pictureButton.addEventListener("click", fetchCatPicture);
